@@ -1,0 +1,15 @@
+
+  <h1 class="title">Account Login</h1>
+  {{#if errors}}
+  <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    {{errors}}
+  </div>
+  {{/if}}
+  <form action="/login" method="post">
+    <input type="email" name="email" placeholder="Email" value="{{user.email}}" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <div>
+      <button type="submit">Sign in</button>
+    </div>
+  </form>
